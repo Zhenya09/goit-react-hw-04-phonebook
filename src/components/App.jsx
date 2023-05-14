@@ -34,7 +34,7 @@ export function App() {
   }, [contacts]);
 
   const onChangeInput = evt => {
-    const { name, value } = evt.currentTarget;
+    const { value } = evt.currentTarget;
 
     setFilter(value);
   };
