@@ -18,16 +18,16 @@ export function App() {
   const [contacts, setContacts] = useState(() => JSON.parse(window.localStorage.getItem(CONTACTS)) ?? initialContacts);
   const [filter, setFilter] = useState('');
 
-  useEffect(() => {
-    const savedContacts = localStorage.getItem(CONTACTS);
+  // useEffect(() => {
+  //   const savedContacts = localStorage.getItem(CONTACTS);
 
-    if (savedContacts !== null) {
-      const parsedContacts = JSON.parse(savedContacts);
-      setContacts(parsedContacts);
-    } else {
-      setContacts(initialContacts);
-    }
-  }, []);
+  //   if (savedContacts !== null) {
+  //     const parsedContacts = JSON.parse(savedContacts);
+  //     setContacts(parsedContacts);
+  //   } else {
+  //     setContacts(initialContacts);
+  //   }
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem(CONTACTS, JSON.stringify(contacts));
